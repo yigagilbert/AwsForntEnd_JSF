@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns:h="http://java.sun.com/jsf/html" xmlns:f="http://java.sun.com/jsf/core" xmlns:p="http://primefaces.org/ui"
+      xmlns="http://www.w3.org/1999/xhtml">
+
+<h:head>
+    <f:facet name="first">
+        <meta http-equiv="X-UA-Compatible" projectDocument="IE=edge"/>
+        <meta http-equiv="Content-Type" projectDocument="text/html; charset=UTF-8"/>
+        <meta name="viewport" projectDocument="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+        <meta name="apple-mobile-web-app-capable" projectDocument="yes"/>
+    </f:facet>
+    <title>Content Collection - Error</title>
+</h:head>
+
+<h:body styleClass="exception-body">
+
+    <div class="exception-topbar">
+        <h:link outcome="/pages/dashboard/Dashboard" styleClass="logo">
+            <!-- <p:graphicImage name="images/logo.png" library="california-layout" /> -->
+            <h1 style="color: white;">
+                <B>MVC</B>
+            </h1>
+        </h:link>
+    </div>
+
+    <p:graphicImage styleClass="exception-image" name="images/image-error.png" library="california-layout"/>
+
+    <div class="exception-panel">
+        <p:graphicImage styleClass="exception-icon" name="images/icon-error.png" library="california-layout"/>
+        <h1 class="exception-summary">Error Occured</h1>
+        <p class="exception-detail">
+            An error occured, please try again later.<br></br>
+            Try to search again or use the Go to Dashboard button below.
+        </p>
+        <div>
+            <p:button outcome="/pages/dashboard/Dashboard" value="Go To Dashboard"/>
+        </div>
+    </div>
+    <h:outputStylesheet name="css/layout-#{guestPreferences.theme}.css" library="california-layout"/>
+</h:body>
+
+</html>
